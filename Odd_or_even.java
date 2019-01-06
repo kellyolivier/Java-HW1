@@ -6,6 +6,7 @@ public class Odd_or_even {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number between 10 and 100: ");
         int input = scanner.nextInt();
+        //PT -- check the input in 10-100. -2
         
         //loop based on number of ints that user wants tested
         for(int i = 0; i < (input); i++)
