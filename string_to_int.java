@@ -17,15 +17,17 @@ public class string_to_int {
         for(int i = 0; i < input.length(); i++)
         {
             char currentChar = input.charAt(i); 
+            //PT -- if (currentChar >= '0' && currentChar < '9')
             if(currentChar >=48 && currentChar <=57)//legal number, based on ascii
             {
-                currentNum = currentChar-48;
+                currentNum = currentChar-48; //PT -- -'0'
                 result += currentNum;
                 if(i >= startDigit && i!=(input.length()-1))
                 {
                     result = result*10;
                 }
             }
+            //PT -- this should only happen on the first character. -1
             else if(currentChar == 45 && i ==0) //handle negative sign at start, but not in middle
             {
                 isNegative = true;
